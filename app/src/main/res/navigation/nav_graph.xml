@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    tools:ignore="UnusedNavigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.soict.hoangviet.navigationdoc.ui.MainFragment"
+        android:label="fragment_specify_amount"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/navigate_to_profile_fragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.soict.hoangviet.navigationdoc.ui.ProfileFragment"
+        android:label="fragment_confirm"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.soict.hoangviet.navigationdoc.ui.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action android:id="@+id/navigate_to_enter_profile"
+            app:destination="@+id/registration_graph"/>
+    </fragment>
+
+    <include app:graph="@navigation/registration_graph" />
+</navigation>

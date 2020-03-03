@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registration_graph"
+    app:startDestination="@id/enterProfileFragment">
+
+    <fragment
+        android:id="@+id/enterProfileFragment"
+        android:name="com.soict.hoangviet.navigationdoc.ui.EnterProfileFragment"
+        android:label="fragment_enter_profile"
+        tools:layout="@layout/fragment_enter_profile" >
+        <action
+            android:id="@+id/action_enterProfileFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.soict.hoangviet.navigationdoc.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+</navigation>
